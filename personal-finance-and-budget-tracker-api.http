@@ -1,0 +1,6 @@
+@personal_finance_and_budget_tracker_api_HostAddress = http://localhost:5175
+
+GET {{personal_finance_and_budget_tracker_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
