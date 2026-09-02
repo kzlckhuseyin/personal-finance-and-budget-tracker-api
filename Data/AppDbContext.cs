@@ -14,8 +14,9 @@ public class AppDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+        var fakeUsers = UserSeeder.GetFakeUser(30);
+        modelBuilder.Entity<User>().HasData(fakeUsers);
+        modelBuilder.Entity<Category>().HasData(CategorySeeder.GetFakeCategories(50, fakeUsers));
 
-        modelBuilder.Entity<Category>().HasData(CategorySeeder.GetFakeCategories(10));
-        modelBuilder.Entity<User>().HasData(UserSeeder.GetFakeUser(10));
     }
 }
