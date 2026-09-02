@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -10,9 +11,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace personal_finance_and_budget_tracker_api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260902125959_FixStaticSeederValues")]
+    partial class FixStaticSeederValues
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -162,70 +165,70 @@ namespace personal_finance_and_budget_tracker_api.Migrations
                             Id = 10,
                             CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Email = "Alpsalci.Atan@hotmail.com",
-                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2eZS1xJSsk8ERtvmPyhUkYZrEi9LYzOYi"
+                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2e7/G6YxO3c4P3K2Q9m9u.eD.fW4xQ1mS"
                         },
                         new
                         {
                             Id = 11,
                             CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Email = "Bulus76@gmail.com",
-                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2eZS1xJSsk8ERtvmPyhUkYZrEi9LYzOYi"
+                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2e7/G6YxO3c4P3K2Q9m9u.eD.fW4xQ1mS"
                         },
                         new
                         {
                             Id = 12,
                             CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Email = "Atalan38@gmail.com",
-                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2eZS1xJSsk8ERtvmPyhUkYZrEi9LYzOYi"
+                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2e7/G6YxO3c4P3K2Q9m9u.eD.fW4xQ1mS"
                         },
                         new
                         {
                             Id = 13,
                             CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Email = "Baysungur_Akal39@gmail.com",
-                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2eZS1xJSsk8ERtvmPyhUkYZrEi9LYzOYi"
+                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2e7/G6YxO3c4P3K2Q9m9u.eD.fW4xQ1mS"
                         },
                         new
                         {
                             Id = 14,
                             CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Email = "Aladag_Sayginer4@gmail.com",
-                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2eZS1xJSsk8ERtvmPyhUkYZrEi9LYzOYi"
+                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2e7/G6YxO3c4P3K2Q9m9u.eD.fW4xQ1mS"
                         },
                         new
                         {
                             Id = 15,
                             CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Email = "Alptutuk_Catalbas18@hotmail.com",
-                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2eZS1xJSsk8ERtvmPyhUkYZrEi9LYzOYi"
+                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2e7/G6YxO3c4P3K2Q9m9u.eD.fW4xQ1mS"
                         },
                         new
                         {
                             Id = 16,
                             CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Email = "Aydogan.Koyluoglu53@gmail.com",
-                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2eZS1xJSsk8ERtvmPyhUkYZrEi9LYzOYi"
+                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2e7/G6YxO3c4P3K2Q9m9u.eD.fW4xQ1mS"
                         },
                         new
                         {
                             Id = 17,
                             CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Email = "Buyat2@hotmail.com",
-                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2eZS1xJSsk8ERtvmPyhUkYZrEi9LYzOYi"
+                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2e7/G6YxO3c4P3K2Q9m9u.eD.fW4xQ1mS"
                         },
                         new
                         {
                             Id = 18,
                             CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Email = "Burkek24@gmail.com",
-                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2eZS1xJSsk8ERtvmPyhUkYZrEi9LYzOYi"
+                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2e7/G6YxO3c4P3K2Q9m9u.eD.fW4xQ1mS"
                         },
                         new
                         {
                             Id = 19,
                             CreatedAt = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Email = "Avsar4@hotmail.com",
-                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2eZS1xJSsk8ERtvmPyhUkYZrEi9LYzOYi"
+                            PasswordHash = "$2a$11$e8S.s/Hw.NnU1yZk5fJp2e7/G6YxO3c4P3K2Q9m9u.eD.fW4xQ1mS"
                         });
                 });
 #pragma warning restore 612, 618
