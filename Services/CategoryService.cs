@@ -1,17 +1,21 @@
 public class CategoryService : ICategoryService
 {
     private readonly AppDbContext _context;
-    public CategoryService(AppDbContext context)
+    private readonly ICurrentUserService _currentUserService;
+    public CategoryService(AppDbContext context, ICurrentUserService currentUserService)
     {
         _context = context;
+        _currentUserService = currentUserService;
     }
 
     public Category Create(CategoryCreateDto dto)
     {
+        int currentUserId = _currentUserService.GetUserId();
         var category = new Category
         {
             Name = dto.Name,
-            Type = dto.Type
+            Type = dto.Type,
+            UserId = currentUserId
         };
 
         _context.Categories.Add(category);
@@ -22,7 +26,8 @@ public class CategoryService : ICategoryService
     public bool Delete(int id)
     {
         var category = _context.Categories.FirstOrDefault(x => x.Id == id);
-        if (category == null)
+        int currentUserId = _currentUserService.GetUserId();
+        if (category == null || category.UserId != currentUserId)
         {
             return false;
         }
@@ -50,7 +55,8 @@ public class CategoryService : ICategoryService
     public Category? Update(CategoryCreateDto dto, int id)
     {
         var category = _context.Categories.FirstOrDefault(x => x.Id == id);
-        if (category == null)
+        int currentUserId = _currentUserService.GetUserId();
+        if (category == null || category.UserId != currentUserId)
         {
             return null;
         }
